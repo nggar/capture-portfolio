@@ -44,7 +44,7 @@ h4 {
     font-size: 2rem;
 }
 p {
-    padding: 5rem 0rem;
+    padding: 3rem 0rem;
     color: #ccc;
     line-height: 150%;
 }
