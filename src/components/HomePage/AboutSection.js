@@ -1,5 +1,6 @@
 // Images
 import homeImg1 from '../../img/home1.png';
+import Wave from '../../utils/Wave';
 // Style
 import styled from 'styled-components';
 import { SectionLayout, Description, Image } from './Styles';
@@ -29,6 +30,7 @@ const AboutSection = () => {
             <Image>
                 <motion.img variants={photoAnimation} src={homeImg1} alt="camera guy" />
             </Image>
+            <Wave />
         </About>
     );
 }

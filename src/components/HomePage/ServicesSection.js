@@ -10,7 +10,6 @@ import { SectionLayout, Description, Image } from './Styles';
 
 const ServicesSection = () => {
     return (
-
         <Services>
             <Description>
                 <h2>High <span>quality</span> services.</h2>
@@ -44,7 +43,6 @@ const ServicesSection = () => {
                         <p>Lorem ipsum dolor sit amet.</p>
                     </Card>
                 </Cards>
-
             </Description>
             <Image>
                 <img src={homeImg2} alt="camera" />
