@@ -12,21 +12,21 @@ const Works = () => {
             <StyledMovie>
                 <h2>The Athlete</h2>
                 <div className="line"></div>
-                <Link to=''>
+                <Link to='the-athlete'>
                     <img src={athlete} alt='athlete' />
                 </Link>
             </StyledMovie>
             <StyledMovie>
                 <h2>The Racer</h2>
                 <div className="line"></div>
-                <Link to=''>
+                <Link to='the-racer'>
                     <img src={theracer} alt="the racer" />
                 </Link>
             </StyledMovie>
             <div>
                 <h2>Good Times</h2>
                 <div className="line"></div>
-                <Link to=''>
+                <Link to='good- times'>
                     <img src={goodtimes} alt='goodtimes' />
                 </Link>
             </div>
@@ -37,6 +37,7 @@ const Works = () => {
 // styled
 const StyledWorks = styled.div`
     min-height: 100vh;
+    color: white;
     overflow: hidden;
     padding: 5rem 10rem;
     h2 {
