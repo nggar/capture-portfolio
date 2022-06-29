@@ -16,7 +16,9 @@ const MovieDetails = () => {
     useEffect( () => {
         const currentMovie = movies.filter( ( stateMovie ) => stateMovie.url === url );
         // movies is an array of objects, when we filter it we still get an array.
-        setMovie( currentMovie[0] ); // so still need specify the index, even there is only 1 object
+        if ( currentMovie[0] ) {
+            setMovie( currentMovie[0] );
+        }
     }, [movies, url] );
 
     return (
