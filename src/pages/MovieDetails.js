@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { MovieState } from '../utils/movieState';
+// animation
+import { motion } from 'framer-motion';
+import { pageTransition } from '../utils/animation';
 
 const MovieDetails = () => {
-    const location = useLocation();
-    const url = location.pathname;
+    const loc = useLocation();
+    const url = loc.pathname;
     const [movies] = useState( MovieState );
     const [movie, setMovie] = useState( undefined );
 
@@ -18,8 +21,8 @@ const MovieDetails = () => {
 
     return (
         <>
-            {movie && ( //element will rendered after movie is not undefined
-                <Details>
+            {movie && (
+                <Details variants={pageTransition} initial="hidden" animate="show" exit='exit' >
                     <HeadLine>
                         <h2>{movie.title}</h2>
                         <img src={movie.mainImg} alt={movie.title} />
@@ -54,7 +57,7 @@ const Award = ( { title, description } ) => {
 }
 
 // styled
-const Details = styled.div`
+const Details = styled( motion.div )`
   color: white;
 `;
 const HeadLine = styled.div`

@@ -1,18 +1,20 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
 // Images
 import athlete from '../img/athlete-small.png';
 import theracer from '../img/theracer-small.png';
 import goodtimes from '../img/goodtimes-small.png';
+// animation
+import { motion } from 'framer-motion';
+import { pageTransition } from '../utils/animation';
 
 const Works = () => {
     return (
-        <StyledWorks>
+        <StyledWorks style={{ background: '#fff' }} variants={pageTransition} initial='hidden' animate='show' exit='exit'>
             <StyledMovie>
                 <h2>The Athlete</h2>
                 <div className="line"></div>
-                <Link to='the-athlete'>
+                <Link to='the-athlete' >
                     <img src={athlete} alt='athlete' />
                 </Link>
             </StyledMovie>
@@ -23,21 +25,20 @@ const Works = () => {
                     <img src={theracer} alt="the racer" />
                 </Link>
             </StyledMovie>
-            <div>
+            <StyledMovie>
                 <h2>Good Times</h2>
                 <div className="line"></div>
                 <Link to='good-times'>
                     <img src={goodtimes} alt='goodtimes' />
                 </Link>
-            </div>
+            </StyledMovie>
         </StyledWorks>
     )
 }
 
 // styled
-const StyledWorks = styled.div`
+const StyledWorks = styled( motion.div )`
     min-height: 100vh;
-    color: white;
     overflow: hidden;
     padding: 5rem 10rem;
     h2 {
