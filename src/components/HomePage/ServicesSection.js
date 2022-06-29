@@ -17,28 +17,28 @@ const ServicesSection = () => {
                 <Cards>
                     <Card>
                         <div className="icon">
-                            <img src={clock} alt="" />
+                            <img src={clock} alt="icon" />
                             <h3>Efficient</h3>
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={teamwork} alt="" />
+                            <img src={teamwork} alt="icon" />
                             <h3>Teamwork</h3>
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={diaphragm} alt="" />
-                            <h3>Pro Gear</h3>
+                            <img src={diaphragm} alt="icon" />
+                            <h3>Pro Grade Gear</h3>
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={money} alt="" />
+                            <img src={money} alt="icon" />
                             <h3>Affordable</h3>
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
@@ -57,11 +57,11 @@ const ServicesSection = () => {
 //Styled Component
 const Services = styled( SectionLayout )`
     h2 {
-        padding-bottom: 5rem;
+        padding-bottom: 10rem;
     }
     p {
         width: 70%;
-        padding: 2rem 0 4rem 0;
+        padding: 3rem 0 6rem 0;
     }
 `
 
@@ -71,17 +71,22 @@ const Cards = styled.div`
 `
 
 const Card = styled.div`
-    flex-basis: 16rem;
+    flex-basis: 24rem;
 
     .icon {
         display: flex;
         align-items: center;
 
+        img {
+            width: 3.5rem;
+        }
+
         h3 {
-            margin-left: 1rem;
+            margin-left: 2rem;
             background: white;
             color: black;
-            padding: 1rem;
+            padding:  1rem;
+            
         }
     }
 `

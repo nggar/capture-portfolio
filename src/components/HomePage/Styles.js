@@ -10,7 +10,7 @@ export const SectionLayout = styled.div`
 `
 export const Description = styled.div`
     flex: 1;
-    padding-right: 5rem;
+    padding-right: 10rem;
 
     h2 {
         font-weight: lighter;

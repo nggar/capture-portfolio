@@ -26,7 +26,7 @@ const Works = () => {
             <div>
                 <h2>Good Times</h2>
                 <div className="line"></div>
-                <Link to='good- times'>
+                <Link to='good-times'>
                     <img src={goodtimes} alt='goodtimes' />
                 </Link>
             </div>
