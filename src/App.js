@@ -10,12 +10,14 @@ import GlobalStyle from './components/GlobalStyle';
 import { Routes, Route, useLocation } from 'react-router-dom';
 // animation
 import { AnimatePresence } from 'framer-motion';
+import ScrollTop from './utils/ScrollTop';
 
 function App() {
     const location = useLocation();
     return (
         <div className="App">
             <GlobalStyle />
+            <ScrollTop />
             <Nav />
             <AnimatePresence exitBeforeEnter>
                 <Routes location={location} key={location.pathname}>
