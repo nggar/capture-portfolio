@@ -54,6 +54,7 @@ const ServicesSection = () => {
 
 //Styled Component
 const Services = styled( SectionLayout )`
+    padding: 15rem 10rem 5rem;
     h2 {
         padding-bottom: 10rem;
     }

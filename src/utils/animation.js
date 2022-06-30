@@ -7,7 +7,7 @@ export const pageTransition = {
         transition: { duration: .5, when: 'beforeChildren', staggerChildren: .25 }
     },
     exit: {
-        opacity: 0, y: 300,
+        opacity: 0,
         transition: { duration: .5 }
     }
 }

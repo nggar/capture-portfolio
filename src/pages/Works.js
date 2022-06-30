@@ -29,14 +29,14 @@ const Works = () => {
                 </Link>
             </StyledMovie>
             <StyledMovie>
-                <motion>The Racer</motion>
+                <h2>The Racer</h2>
                 <div className="line"></div>
                 <Link to='the-racer'>
                     <img src={theracer} alt="the racer" />
                 </Link>
             </StyledMovie>
             <StyledMovie>
-                <motion>Good Times</motion>
+                <h2>Good Times</h2>
                 <div className="line"></div>
                 <Link to='good-times'>
                     <img src={goodtimes} alt='goodtimes' />
