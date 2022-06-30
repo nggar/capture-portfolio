@@ -1,37 +1,20 @@
 import styled from 'styled-components';
 import { SectionLayout } from './Styles';
-import Toggle from '../Toggle';
+import Toggle from '../../utils/Toggle';
 import { AnimateSharedLayout } from 'framer-motion';
+import { useScroll } from '../../utils/useScroll';
+import { scrollReaveal } from '../../utils/animation';
 
 const FaqSection = () => {
+    const [element, controls] = useScroll();
     return (
-        <FAQ>
+        <FAQ ref={element} animate={controls} variants={scrollReaveal} initial='hidden'>
             <h2>Any Questions? <span>FAQ</span></h2>
             <AnimateSharedLayout>
-                <Toggle title='How Do I Start?'>
-                    <div className="answer">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, reprehenderit perferendis sunt magni dolores ratione.</p>
-                    </div>
-                </Toggle>
-                <Toggle title='What Products do you offer?'>
-                    <div className="answer">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, reprehenderit perferendis sunt magni dolores ratione.</p>
-                    </div>
-                </Toggle>
-                <Toggle title='Diferrent Payment Methods'>
-                    <div className="answer">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, reprehenderit perferendis sunt magni dolores ratione.</p>
-                    </div>
-                </Toggle>
-                <Toggle title='Daily Schedule'>
-                    <div className="answer">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, reprehenderit perferendis sunt magni dolores ratione.</p>
-                    </div>
-                </Toggle>
+                <Toggle title='How Do I Start?' />
+                <Toggle title='What Products do you offer?' />
+                <Toggle title='Diferrent Payment Methods' />
+                <Toggle title='Daily Schedule' />
             </AnimateSharedLayout>
         </FAQ >
     );
@@ -59,7 +42,7 @@ const FAQ = styled( SectionLayout )`
         cursor: pointer;
     }
     .answer {
-        padding: 2rem 0;
+        padding: 2rem 0 0rem;
         p {
             padding: 1rem 0;
         }
